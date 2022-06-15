@@ -1,0 +1,34 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.domain.entity.CustomerDto;
+import com.example.demo.service.CustomerDtoService;
+
+@RestController
+public class CustomerDtoController {
+	
+	@Autowired
+	CustomerDtoService service;
+	
+	@PostMapping("/api/customer")
+	public int createCustomer(@RequestBody CustomerDto customerDto) {
+		return service.createCustomer(customerDto);
+	}
+	//id를 이용하여 Customer를 조회하는 기능(API)을 개발하세요.^^, Dto를 이용하도록 해주세요. 50분까지 ~~~
+	// 4시에 시작합니다.
+	@GetMapping("/api/customer/{id}")
+	public CustomerDto findCustomerById(@PathVariable Long id) {
+		return service.findCustomerById(id);
+	}
+	@GetMapping("/api/hi")
+	public String callApi() {
+		return service.callApi();
+	}
+
+}
