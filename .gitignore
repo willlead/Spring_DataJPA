@@ -3,3 +3,6 @@ Spring_DataJPA/mvnw
 Spring_DataJPA/mvnw.cmd
 Spring_DataJPA/.mvn/
 demo/
+OrderService/.mvn/
+OrderService/mvnw
+OrderService/mvnw.cmd

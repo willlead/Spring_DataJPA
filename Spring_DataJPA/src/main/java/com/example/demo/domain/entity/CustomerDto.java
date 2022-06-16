@@ -11,4 +11,6 @@ public class CustomerDto {
 
 	String name;
 	String address;
+	
+	//userid, orderid, product
 }
