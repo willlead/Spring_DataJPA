@@ -21,6 +21,7 @@ public class CustomerController {
 	public int createCustomer(@RequestBody Customer customer) {
 		if(service.createCustomer(customer) != null) {
 			return 1; 
+			// test 
 		} 
 		return 0;
 	}
